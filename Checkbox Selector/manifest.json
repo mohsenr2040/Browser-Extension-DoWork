@@ -4,10 +4,10 @@
     "name": "CheckboxSelector-MrDev",
     "version": "1.0",
   
-    "description": "Adds a red border to all webpages matching mozilla.org.",
+    "description": "add a input file tag in top of a table to select some checkboxes base on valuse in the file",
   
     "icons": {
-      "48": "icons/border-48.png"
+      "48": "icons/checked-48.png"
     },
   
     "content_scripts": [
