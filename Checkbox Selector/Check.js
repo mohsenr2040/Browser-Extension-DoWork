@@ -1,7 +1,8 @@
 
 var lines= new Array();
 var grid = document.getElementById("Table1");
-
+if(document.getElementById("filetocheck")==null)
+{
 var newRow = grid.insertRow(0);
 
 // Insert a cell at the end of the row
@@ -20,23 +21,38 @@ button.onchange=function()
     console.log(this.result);
 
     // By lines
-     lines = this.result.split('\n');
+    lines = this.result.split('\n');
     lines[lines.length-1]=lines[lines.length-1]+' ';
-    
-  var checkboxes = grid.querySelectorAll('input[type=checkbox]')
 
   for(var j=0;j<lines.length;j++)
   {
-      for (var i = 0; i < checkboxes.length; i++) {
-          var row = checkboxes[i].parentNode.parentNode;
-          if(lines[j].substring(0,lines[j].length-1)==row.cells[3].innerText)
+      for (var i = 2; i < grid.rows.length; i++)
+      {
+          var checkbox=grid.rows[i].cells[0].firstChild;
+          if(lines[j].substring(0,lines[j].length-1)==grid.rows[i].cells[3].innerText)
                {
-                    checkboxes[i].checked = true;
+                    checkbox.checked = true;
                }
       }
     }
   };
   reader.readAsText(file);
 }
-
 newCell.appendChild(button);
+
+var newCell2 = newRow.insertCell();
+var btn_cancel = document.createElement('input');
+btn_cancel.type = 'button';
+btn_cancel.id = 'cancelcheck';
+btn_cancel.name = 'Cancel';
+btn_cancel.value="Cancel";
+btn_cancel.onclick=function()
+{
+  var checkboxes = grid.querySelectorAll('input[type=checkbox]')
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+  }
+}
+newCell2.appendChild(btn_cancel);
+
+}
