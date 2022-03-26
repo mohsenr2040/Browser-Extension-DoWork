@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "Do_job-MrDev",
+    "version": "1.0",
+  
+    "description": "It does some jobs in a especial webapp",
+  
+    "icons": {
+      "48": "icons/DoJob.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches":  ["*://*/*"],
+        "js": ["Do_job.js" ]
+      }
+    ]
+  
+  }
