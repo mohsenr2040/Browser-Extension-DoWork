@@ -18,5 +18,5 @@ to run this project:
  $ Clone the repository in your local repo
  $ load extension in your browser
  $ run single web page
- 
- [Run preview in a .gif file](./Help/Extension-Running-Review.gif)
+```
+ [Running Review with a GIF file](./Help/Extension-Running-Review.gif)
