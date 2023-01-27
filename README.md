@@ -5,7 +5,7 @@
 * [Launch](#Launch)
 
 ## General info
-select checkbox base on a value of another cell in the same row of table
+A browser extension that is developed by Javascript that selects checkboxes based on data in text file which match with values in a specific column
 	
 ## Technologies
 Project is created with:
